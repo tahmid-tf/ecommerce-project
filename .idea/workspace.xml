@@ -133,15 +133,17 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/pages/sitePage" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/public" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\USER\Desktop\Laravel Project\ecommerce-project\public" />
+      <recent name="C:\Users\USER\Desktop\Laravel Project\ecommerce-project\public\js" />
+      <recent name="C:\Users\USER\Desktop\Laravel Project\ecommerce-project\public\css" />
       <recent name="C:\Users\USER\Desktop\Laravel Project\ecommerce-project\resources\views\pages\sitePage" />
       <recent name="C:\Users\USER\Desktop\Laravel Project\ecommerce-project\resources\views" />
-      <recent name="C:\Users\USER\Desktop\Laravel Project\ecommerce-project\public\css" />
     </key>
   </component>
   <component name="RunManager">
@@ -159,7 +161,7 @@
       <option name="presentableId" value="Default" />
       <updated>1614167912944</updated>
       <workItem from="1614167913975" duration="810000" />
-      <workItem from="1614169008736" duration="2284000" />
+      <workItem from="1614169008736" duration="5432000" />
     </task>
     <servers />
   </component>
@@ -167,13 +169,17 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="728" y="322" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1614171996984">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="728" y="322" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040/1920.319.1366.728@0.0.1920.1040" timestamp="1614171996984" />
     <state x="2383" y="438" key="FileChooserDialogImpl" timestamp="1614168039896">
       <screen x="1920" y="319" width="1366" height="728" />
     </state>
     <state x="2383" y="438" key="FileChooserDialogImpl/0.0.1920.1040/1920.319.1366.728@1920.319.1366.728" timestamp="1614168039896" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1614171283057">
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1614178741766">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/1920.319.1366.728@0.0.1920.1040" timestamp="1614171283057" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/1920.319.1366.728@0.0.1920.1040" timestamp="1614178741766" />
   </component>
 </project>

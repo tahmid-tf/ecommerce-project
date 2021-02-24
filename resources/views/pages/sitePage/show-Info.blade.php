@@ -37,6 +37,10 @@
                     </li>
 
                     <li class="nav-item">
+                        <a class="nav-link">Admin-Panel</a>
+                    </li>
+
+                    <li class="nav-item">
                         <a class="nav-link" href="#">Cart(5)</a>
                     </li>
 
