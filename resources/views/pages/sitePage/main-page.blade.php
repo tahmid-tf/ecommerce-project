@@ -112,17 +112,21 @@
         <div class="main-content">
             <div class="row">
 
+                @foreach($products as $product)
+
                 <div class="col-md-3 col-sm-12 columns">
                     <div class="card cards-padding">
-                        <img class="card-img-top main-img-width" src="https://static8.depositphotos.com/1022715/834/i/950/depositphotos_8346493-stock-photo-wooden-chair-over-white-with.jpg" alt="Card image cap">
+                        <img class="card-img-top main-img-width" src="{{$product->product_image}}" alt="Card image cap">
                         <div class="card-body">
-                            <h5 class="card-title">Chair</h5>
-                            <p class="card-text">950/-</p>
+                            <h5 class="card-title">{{$product->product_name}}</h5>
+                            <p class="card-text">{{$product->product_price}}/-</p>
                             <a href="#" class="btn btn-info btn-width-cap show-info-button">Show Info</a>
                             <a href="#" class="btn btn-primary btn-width-cap">Add to cart</a>
                         </div>
                     </div>
                 </div>
+
+                @endforeach
 
                 <div class="col-md-3 col-sm-12 columns">
                     <div class="card cards-padding">

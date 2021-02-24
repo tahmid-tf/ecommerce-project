@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ProductController;
+use App\Http\Controllers\MainpageController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,11 +23,9 @@ Auth::routes();
 
 //Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Route::get('/', function () {
-    return view('pages.sitePage.main-page');
-});
+Route::get('/',[MainpageController::class,'index']);
 
-
+Route::resource('product',ProductController::class);
 
 Route::get('admin',function (){
     return view('pages.adminPage.index');
