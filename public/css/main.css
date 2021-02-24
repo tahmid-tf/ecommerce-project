@@ -1,0 +1,54 @@
+.main-content{
+    width: 100%;
+    padding: 15px;
+}
+.available-products{
+    margin-left: 15px;
+    margin-top: 25px;
+}
+
+.btn-width-cap{
+    width: 100%;
+}
+
+.main-img-width{
+    width: 100px;
+    height: 300px;
+}
+
+.columns{
+    margin-top: 15px;
+}
+
+.nav-item-margin{
+    margin-right: 10px;
+}
+.show-info-button{
+    margin-bottom: 5px;
+}
+
+.cards-padding{
+    width: 18rem;
+    padding: 5px
+}
+
+/*show info page section */
+
+.show-info-padding{
+    padding: 40px;
+}
+
+.sample-img-width{
+    width: 100px;
+    height: 100px;
+}
+
+.sample-img-padding{
+    margin-top: 10px
+}
+
+@media screen and (max-width: 200px) {
+    .nav-item-margin{
+        margin-right: 0px;
+    }
+}
