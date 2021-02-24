@@ -40,9 +40,13 @@
                             <a class="nav-link" href="#">Cart(5)</a>
                         </li>
 
-                        <li class="nav-item">
+{{--                        <li class="nav-item">--}}
 {{--                            <a class="nav-link" href="{{auth()->logout()}}">Logout</a>--}}
-                        </li>
+{{--                            <form action="/logout" method="post">--}}
+{{--                                {{csrf_field()}}--}}
+{{--                                <input type="submit" value="Logout" class="nav-link">--}}
+{{--                            </form>--}}
+{{--                        </li>--}}
 
                     @endif
                 </ul>
@@ -52,6 +56,16 @@
                     <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
                     <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
                 </form>
+
+                @if(auth()->user())
+                    <div class="logout">
+                        <form action="/logout" method="post" class="form-inline my-2 my-lg-0">
+                            {{csrf_field()}}
+                            <button class="btn btn-outline-danger my-2 my-sm-0" type="submit">Logout</button>
+                        </form>
+                    </div>
+                @endif
+
             </div>
         </nav>
     </div>
