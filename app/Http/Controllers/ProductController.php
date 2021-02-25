@@ -15,6 +15,8 @@ class ProductController extends Controller
     public function index()
     {
         //will show all the available products
+        $products = Product::all();
+        return view('pages.adminPage.products.index-product',compact('products'));
     }
 
     /**
