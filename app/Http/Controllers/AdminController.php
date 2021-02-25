@@ -2,10 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Product;
 use Illuminate\Http\Request;
 
-class MainpageController extends Controller
+class AdminController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,8 +13,7 @@ class MainpageController extends Controller
      */
     public function index()
     {
-        $products = Product::all();
-        return view('pages.sitePage.main-page',compact('products'));
+        return view('pages.adminPage.index');
     }
 
     /**
@@ -47,8 +45,7 @@ class MainpageController extends Controller
      */
     public function show($id)
     {
-        $product = Product::find($id);
-        return view('pages.sitePage.show-info',compact('product'));
+        //
     }
 
     /**

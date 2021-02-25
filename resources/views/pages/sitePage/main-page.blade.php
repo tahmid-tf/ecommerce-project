@@ -37,21 +37,12 @@
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link">Admin-Panel</a>
+                            <a class="nav-link" href="{{route('admin.index')}}">Admin-Panel</a>
                         </li>
 
                         <li class="nav-item">
                             <a class="nav-link" href="#">Cart(5)</a>
                         </li>
-
-{{--                        <li class="nav-item">--}}
-{{--                            <a class="nav-link" href="{{auth()->logout()}}">Logout</a>--}}
-{{--                            <form action="/logout" method="post">--}}
-{{--                                {{csrf_field()}}--}}
-{{--                                <input type="submit" value="Logout" class="nav-link">--}}
-{{--                            </form>--}}
-{{--                        </li>--}}
-
                     @endif
                 </ul>
 
@@ -120,61 +111,15 @@
                         <div class="card-body">
                             <h5 class="card-title">{{$product->product_name}}</h5>
                             <p class="card-text">{{$product->product_price}}/-</p>
-                            <a href="#" class="btn btn-info btn-width-cap show-info-button">Show Info</a>
+                            <a href="{{route('product.show',$product->id)}}" class="btn btn-info btn-width-cap show-info-button">Show Info</a>
                             <a href="#" class="btn btn-primary btn-width-cap">Add to cart</a>
                         </div>
                     </div>
                 </div>
-
                 @endforeach
 
-                <div class="col-md-3 col-sm-12 columns">
-                    <div class="card cards-padding">
-                        <img class="card-img-top main-img-width" src="https://target.scene7.com/is/image/Target/GUEST_3345b6d4-692e-4aea-ba22-07a9181a0833?wid=488&hei=488&fmt=pjpeg" alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title">Table</h5>
-                            <p class="card-text">950/-</p>
-                            <a href="#" class="btn btn-info btn-width-cap show-info-button">Show Info</a>
-                            <a href="#" class="btn btn-primary btn-width-cap">Add to cart</a>
-                        </div>
-                    </div>
-                </div>
 
-                <div class="col-md-3 col-sm-12 columns">
-                    <div class="card" style="width: 18rem;">
-                        <img class="card-img-top main-img-width" src="https://incanda.co.za/wp-content/uploads/2018/10/LIN_7678-scaled.jpg" alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title">Table</h5>
-                            <p class="card-text">950/-</p>
-                            <a href="#" class="btn btn-info btn-width-cap show-info-button">Show Info</a>
-                            <a href="#" class="btn btn-primary btn-width-cap">Add to cart</a>
-                        </div>
-                    </div>
-                </div>
 
-                <div class="col-md-3 col-sm-12 columns">
-                    <div class="card" style="width: 18rem;">
-                        <img class="card-img-top main-img-width" src="https://images-na.ssl-images-amazon.com/images/I/61nKGKkNHeL._SL1204_.jpg" alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title">Chair</h5>
-                            <p class="card-text">950/-</p>
-                            <a href="#" class="btn btn-info btn-width-cap show-info-button">Show Info</a>
-                            <a href="#" class="btn btn-primary btn-width-cap">Add to cart</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-3 col-sm-12 columns">
-                    <div class="card" style="width: 18rem;">
-                        <img class="card-img-top main-img-width" src="https://images-na.ssl-images-amazon.com/images/I/61nKGKkNHeL._SL1204_.jpg" alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title">Chair</h5>
-                            <p class="card-text">950/-</p>
-                            <a href="#" class="btn btn-info btn-width-cap show-info-button">Show Info</a>
-                            <a href="#" class="btn btn-primary btn-width-cap">Add to cart</a>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     </div>

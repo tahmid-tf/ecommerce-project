@@ -37,13 +37,12 @@
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link">Admin-Panel</a>
+                        <a class="nav-link" href="{{route('admin.index')}}">Admin-Panel</a>
                     </li>
 
                     <li class="nav-item">
                         <a class="nav-link" href="#">Cart(5)</a>
                     </li>
-
                 @endif
             </ul>
 
@@ -67,21 +66,21 @@
     </nav>
 </div>
 
-{{--single search section--}}
+{{--single product section--}}
 
 <section>
     <div class="show-info-padding">
         <div class="row">
             <div class="col-md-3">
                 <div class="card cards-padding">
-                    <img class="card-img-top main-img-width" src="https://static8.depositphotos.com/1022715/834/i/950/depositphotos_8346493-stock-photo-wooden-chair-over-white-with.jpg" alt="Card image cap">
+                    <img class="card-img-top main-img-width" src="{{$product->product_image}}" alt="Card image cap">
                 </div>
             </div>
 
             <div class="col-md-9">
                 <div class="card-body" style="margin-top: 50px">
-                    <h5 class="card-title" style="text-align: center">Chair</h5>
-                    <p class="card-text" style="text-align: center">950/-</p>
+                    <h5 class="card-title" style="text-align: center">{{$product->product_name}}</h5>
+                    <p class="card-text" style="text-align: center">{{$product->product_price}}/-</p>
                     <a href="#" class="btn btn-primary btn-width-cap">Add to cart</a>
                 </div>
             </div>
@@ -105,11 +104,15 @@
                     </div>
                 </div>
 
-
-
         </div>
     </div>
 
+</section>
+
+{{--footer section--}}
+
+<section class="footer">
+    <x-footer></x-footer>
 </section>
 
 
