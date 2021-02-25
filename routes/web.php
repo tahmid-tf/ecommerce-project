@@ -8,7 +8,7 @@ use App\Http\Controllers\AdminController;
 Auth::routes();
 
 Route::get('/',[MainpageController::class,'index']);
-Route::get('/product/{id}',[MainpageController::class,'show'])->name('product.show');
+Route::get('/products/{id}',[MainpageController::class,'show'])->name('products.show');
 
 Route::resource('product',ProductController::class);
 

@@ -111,7 +111,7 @@
                         <div class="card-body">
                             <h5 class="card-title">{{$product->product_name}}</h5>
                             <p class="card-text">{{$product->product_price}}/-</p>
-                            <a href="{{route('product.show',$product->id)}}" class="btn btn-info btn-width-cap show-info-button">Show Info</a>
+                            <a href="{{route('products.show',$product->id)}}" class="btn btn-info btn-width-cap show-info-button">Show Info</a>
                             <a href="#" class="btn btn-primary btn-width-cap">Add to cart</a>
                         </div>
                     </div>
