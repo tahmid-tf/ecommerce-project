@@ -14,7 +14,6 @@
             <h6 class="collapse-header">Product Components:</h6>
             <a class="collapse-item" href="{{route('product.index')}}">Product Index</a>
             <a class="collapse-item" href="{{route('product.create')}}">Add Product</a>
-            <a class="collapse-item" href="cards.html">Cards</a>
         </div>
     </div>
 </li>

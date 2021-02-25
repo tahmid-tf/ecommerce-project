@@ -6,11 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="e114a0b3-61ef-4a2b-ad45-0363377b464b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ProductController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Product.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Product.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pages/adminPage/products/index-product.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/adminPage/products/index-product.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pages/sitePage/main-page.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/sitePage/main-page.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pages/sitePage/show-Info.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/sitePage/show-Info.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/components/admin-sidebar-components.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/components/admin-sidebar-components.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -175,7 +171,7 @@
       <updated>1614167912944</updated>
       <workItem from="1614167913975" duration="810000" />
       <workItem from="1614169008736" duration="9359000" />
-      <workItem from="1614233168822" duration="10528000" />
+      <workItem from="1614233168822" duration="11328000" />
     </task>
     <servers />
   </component>
