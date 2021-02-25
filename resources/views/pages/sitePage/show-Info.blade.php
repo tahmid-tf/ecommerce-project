@@ -73,7 +73,7 @@
         <div class="row">
             <div class="col-md-3">
                 <div class="card cards-padding">
-                    <img class="card-img-top main-img-width" src="{{$product->product_image}}" alt="Card image cap">
+                    <img class="card-img-top main-img-width" src="{{asset('storage/'.$product->product_image)}}" alt="Card image cap">
                 </div>
             </div>
 

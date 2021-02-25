@@ -34,10 +34,16 @@
                         <td>{{$product->id}}</td>
                         <td>{{$product->product_name}}</td>
                         <td>{{$product->product_price}}</td>
-                        <td><img src="{{$product->product_image}}" alt="" style="width: 150px"></td>
+                        <td><img src="{{asset('storage/'.$product->product_image)}}" alt="" style="width: 150px"></td>
                         <td>{{$product->created_at->diffForHumans()}}</td>
-                        <td style="text-align: center"><a href="#"><button class="btn btn-outline-primary">Update</button></a></td>
-                        <td style="text-align: center"><a href="#"><button class="btn btn-outline-danger">Delete</button></a></td>
+                        <td style="text-align: center"><a href="{{route('product.edit',$product->id)}}"><button class="btn btn-outline-primary">Update</button></a></td>
+                        <td style="text-align: center">
+                            <form action="{{route('product.destroy',$product->id)}}" method="post">
+                                @method('delete')
+                                {{csrf_field()}}
+                                <input type="submit" value="Delete" class="btn btn-outline-danger">
+                            </form>
+                        </td>
                         <td style="text-align: center"><a href="#"><button class="btn btn-outline-info">Add</button></a></td>
 {{--                        <td>{{$post->created_at}}</td>--}}
 

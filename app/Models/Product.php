@@ -11,10 +11,10 @@ class Product extends Model
 
     protected $guarded = [];
 
-    public function getProductImageAttribute($value){
-        if (strpos($value, 'https://') !== FALSE || strpos($value, 'http://') !== FALSE) {
-            return $value;
-        }
-        return asset('storage/'.$value);
-    }
+//    public function getProductImageAttribute($value){
+//        if (strpos($value, 'https://') !== FALSE || strpos($value, 'http://') !== FALSE) {
+//            return $value;
+//        }
+//        return asset('storage/'.$value);
+//    }
 }

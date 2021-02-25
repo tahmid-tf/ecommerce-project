@@ -7,8 +7,10 @@
     <list default="true" id="e114a0b3-61ef-4a2b-ad45-0363377b464b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ProductController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/components/admin-sidebar-components.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/components/admin-sidebar-components.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/admin/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/admin/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Product.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Product.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pages/adminPage/products/index-product.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/adminPage/products/index-product.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pages/sitePage/main-page.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/sitePage/main-page.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pages/sitePage/show-Info.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/sitePage/show-Info.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -173,7 +175,7 @@
       <updated>1614167912944</updated>
       <workItem from="1614167913975" duration="810000" />
       <workItem from="1614169008736" duration="9359000" />
-      <workItem from="1614233168822" duration="4640000" />
+      <workItem from="1614233168822" duration="10528000" />
     </task>
     <servers />
   </component>
@@ -193,9 +195,9 @@
       <screen x="1920" y="319" width="1366" height="728" />
     </state>
     <state x="2383" y="438" key="FileChooserDialogImpl/0.0.1920.1040/1920.319.1366.728@1920.319.1366.728" timestamp="1614168039896" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1614235280582">
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1614246222329">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/1920.319.1366.728@0.0.1920.1040" timestamp="1614235280582" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/1920.319.1366.728@0.0.1920.1040" timestamp="1614246222329" />
   </component>
 </project>

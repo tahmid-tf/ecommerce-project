@@ -107,7 +107,7 @@
 
                 <div class="col-md-3 col-sm-12 columns">
                     <div class="card cards-padding">
-                        <img class="card-img-top main-img-width" src="{{$product->product_image}}" alt="Card image cap">
+                        <img class="card-img-top main-img-width" src="{{asset('storage/'.$product->product_image)}}" alt="Card image cap">
                         <div class="card-body">
                             <h5 class="card-title">{{$product->product_name}}</h5>
                             <p class="card-text">{{$product->product_price}}/-</p>
