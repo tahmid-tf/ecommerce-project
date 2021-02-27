@@ -48,4 +48,8 @@ class User extends Authenticatable
             return true;
         }
     }
+
+    public function cart(){
+        return $this->hasMany(Cart::class);
+    }
 }

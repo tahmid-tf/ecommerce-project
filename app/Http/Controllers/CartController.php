@@ -2,11 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Cart;
 use App\Models\Product;
 use Illuminate\Http\Request;
 
-class MainpageController extends Controller
+class CartController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,9 +14,7 @@ class MainpageController extends Controller
      */
     public function index()
     {
-        $cart = Cart::count();
-        $products = Product::all();
-        return view('pages.sitePage.main-page',compact('products','cart'));
+        //
     }
 
     /**
@@ -27,7 +24,17 @@ class MainpageController extends Controller
      */
     public function create()
     {
-        //
+    }
+
+    public function add($id){
+        $product = Product::find($id);
+        $inputs = [];
+        $inputs['product_name'] = $product->product_name;
+        $inputs['product_price'] = $product->product_price;
+        $inputs['product_image'] = $product->product_image;
+
+        auth()->user()->cart()->create($inputs);
+        return back();
     }
 
     /**
@@ -38,7 +45,7 @@ class MainpageController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
     }
 
     /**
@@ -49,9 +56,7 @@ class MainpageController extends Controller
      */
     public function show($id)
     {
-        $cart = Cart::count();
-        $product = Product::find($id);
-        return view('pages.sitePage.show-info',compact('product','cart'));
+        //
     }
 
     /**

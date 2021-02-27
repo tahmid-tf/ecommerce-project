@@ -14,10 +14,10 @@
 
 <body>
 
-
+{{--nav section--}}
     <div class="navbar-section">
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <a class="navbar-brand" href="#">TF-STORE</a>
+            <a class="navbar-brand" href="/">TF-STORE</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -41,7 +41,7 @@
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Cart(5)</a>
+                            <a class="nav-link" href="#">Cart({{$cart}})</a>
                         </li>
                     @endif
                 </ul>
@@ -65,7 +65,7 @@
         </nav>
     </div>
 
-
+{{--slider section--}}
 
     <div class="slider-section">
         <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
@@ -96,7 +96,7 @@
         </div>
     </div>
 
-
+{{--available product section--}}
 
     <div class="main-content-section">
         <h5 class="available-products">Available Products</h5>
@@ -112,13 +112,11 @@
                             <h5 class="card-title">{{$product->product_name}}</h5>
                             <p class="card-text">{{$product->product_price}}/-</p>
                             <a href="{{route('products.show',$product->id)}}" class="btn btn-info btn-width-cap show-info-button">Show Info</a>
-                            <a href="#" class="btn btn-primary btn-width-cap">Add to cart</a>
+                            <a href="{{route('cart.add',$product->id)}}" class="btn btn-primary btn-width-cap">Add to cart</a>
                         </div>
                     </div>
                 </div>
                 @endforeach
-
-
 
             </div>
         </div>

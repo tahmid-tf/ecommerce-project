@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\MainpageController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\CartController;
 
 Auth::routes();
 
@@ -17,3 +18,14 @@ Route::resource('product',ProductController::class);
 Route::middleware(['auth','admin'])->group(function (){
     Route::resource('admin',AdminController::class);
 });
+
+Route::middleware(['auth'])->group(function (){
+    Route::resource('cart',CartController::class);
+    Route::get('add/{id}',[CartController::class,'add'])->name('cart.add');
+});
+
+
+//Route::get('test',function (){
+//   $product = \App\Models\Product::count();
+//   return $product;
+//});

@@ -17,7 +17,7 @@
 
 <div class="navbar-section">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">TF-STORE</a>
+        <a class="navbar-brand" href="/">TF-STORE</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -41,7 +41,7 @@
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Cart(5)</a>
+                        <a class="nav-link" href="#">Cart({{$cart}})</a>
                     </li>
                 @endif
             </ul>
@@ -81,7 +81,7 @@
                 <div class="card-body" style="margin-top: 50px">
                     <h5 class="card-title" style="text-align: center">{{$product->product_name}}</h5>
                     <p class="card-text" style="text-align: center">{{$product->product_price}}/-</p>
-                    <a href="#" class="btn btn-primary btn-width-cap">Add to cart</a>
+                    <a href="{{route('cart.add',$product->id)}}" class="btn btn-primary btn-width-cap">Add to cart</a>
                 </div>
             </div>
         </div>
