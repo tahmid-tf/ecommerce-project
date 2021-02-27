@@ -14,7 +14,9 @@ class CartController extends Controller
      */
     public function index()
     {
-        //
+        $carts = auth()->user()->cart;
+        $carts_total_price = auth()->user()->cart()->sum('product_price');
+        return view('pages.cart.cart-index',compact('carts','carts_total_price'));
     }
 
     /**
@@ -79,7 +81,18 @@ class CartController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $cart = auth()->user()->cart()->where('id',$id)->get()->first();
+
+        if (\request('product_quantity') && \request('product_quantity') >= 1 && \request('product_quantity') <= 10) {
+            $inputs = [];
+            $inputs['product_count'] = \request('product_quantity');
+            $inputs['product_price'] = (   ($cart->product_price / $cart->product_count) * (\request('product_quantity'))  );
+            $cart->update($inputs);
+            return back();
+        }else{
+            return back();
+        }
+
     }
 
     /**
@@ -90,6 +103,7 @@ class CartController extends Controller
      */
     public function destroy($id)
     {
-        //
+        auth()->user()->cart()->where('id',$id)->delete();
+        return back();
     }
 }

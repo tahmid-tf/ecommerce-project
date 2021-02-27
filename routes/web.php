@@ -26,6 +26,6 @@ Route::middleware(['auth'])->group(function (){
 
 
 //Route::get('test',function (){
-//   $product = \App\Models\Product::count();
-//   return $product;
+//    $products = \App\Models\Product::all()->sum('product_price');
+//    return $products;
 //});
