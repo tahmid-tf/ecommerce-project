@@ -15,7 +15,8 @@ class ApprovalController extends Controller
      */
     public function index()
     {
-        //
+        $approvals = Approval::all();
+        return view('pages.approval.approval-index',compact('approvals'));
     }
 
     public function add(){
@@ -97,7 +98,8 @@ class ApprovalController extends Controller
      */
     public function update(Request $request, Approval $approval)
     {
-        //
+        $approval->update(['status'=>'approved']);
+        return back();
     }
 
     /**
