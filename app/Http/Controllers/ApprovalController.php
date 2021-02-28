@@ -4,7 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Models\Approval;
 use App\Models\Cart;
+use App\Models\History;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\App;
 
 class ApprovalController extends Controller
 {
@@ -37,6 +39,7 @@ class ApprovalController extends Controller
             $inputs['product_count'] = $cart->product_count;
             $inputs['product_image'] = $cart->product_image;
             Approval::create($inputs);
+            History::create($inputs);
         }
 
         foreach ($carts as $cart){
@@ -96,9 +99,24 @@ class ApprovalController extends Controller
      * @param  \App\Models\Approval  $approval
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Approval $approval)
+    public function update(Request $request, $id)
     {
+        $inputs = [];
+        $approval = Approval::find($id);
+
+        $inputs['name'] = $approval->name;
+        $inputs['email'] = $approval->email;
+        $inputs['phone'] = $approval->phone;
+        $inputs['address'] = $approval->address;
+        $inputs['admin'] = $approval->admin;
+        $inputs['product_name'] = $approval->product_name;
+        $inputs['product_price'] = $approval->product_price;
+        $inputs['product_count'] = $approval->product_count;
+        $inputs['product_image'] = $approval->product_image;
+        $inputs['status'] = 'approved';
+
         $approval->update(['status'=>'approved']);
+        History::create($inputs);
         return back();
     }
 
