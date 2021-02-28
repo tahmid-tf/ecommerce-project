@@ -15,7 +15,11 @@ class MainpageController extends Controller
      */
     public function index()
     {
-        $cart = Cart::count();
+        if (auth()->user()){
+            $cart = auth()->user()->cart()->count();
+        }else{
+            $cart = 0;
+        }
         $products = Product::all();
         return view('pages.sitePage.main-page',compact('products','cart'));
     }
@@ -49,7 +53,11 @@ class MainpageController extends Controller
      */
     public function show($id)
     {
-        $cart = Cart::count();
+        if (auth()->user()){
+            $cart = auth()->user()->cart()->count();
+        }else{
+            $cart = 0;
+        }
         $product = Product::find($id);
         return view('pages.sitePage.show-info',compact('product','cart'));
     }

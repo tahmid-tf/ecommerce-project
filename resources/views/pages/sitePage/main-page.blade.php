@@ -41,7 +41,7 @@
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="{{route('cart.index')}}">Cart({{$cart}})</a>
+                            <a class="nav-link" href="{{route('cart.index')}}">Cart {{$cart === 0 ? '' : '('.$cart.')'}}</a>
                         </li>
                     @endif
                 </ul>
