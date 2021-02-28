@@ -1,6 +1,11 @@
 @extends('layouts.admin.index')
 
 @section('content')
+
+    <div>
+        <a href="{{route('approval.delete')}}"><button class="btn btn-danger">Remove all approved orders</button></a>
+    </div>
+
     <div class="card-body">
         <div class="table-responsive">
             <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">

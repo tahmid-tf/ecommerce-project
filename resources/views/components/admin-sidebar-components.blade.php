@@ -3,7 +3,7 @@
     Interface
 </div>
 
-<!-- Nav Item - Pages Collapse Menu -->
+<!-- Nav Item - Pages Collapse Menu (Products) -->
 <li class="nav-item">
     <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
         <i class="fas fa-fw fa-cog"></i>
@@ -17,6 +17,7 @@
         </div>
     </div>
 </li>
+
 
 <!-- Divider -->
 <hr class="sidebar-divider">
@@ -35,4 +36,21 @@
     </div>
 </li>
 
+<!-- Divider -->
+<hr class="sidebar-divider">
+
+
+<!-- Nav Item - Pages Collapse Menu (Products) -->
+<li class="nav-item">
+    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
+        <i class="fas fa-fw fa-cog"></i>
+        <span>History</span>
+    </a>
+    <div id="collapseFour" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+        <div class="bg-white py-2 collapse-inner rounded">
+            <h6 class="collapse-header">Product Components:</h6>
+            <a class="collapse-item" href="{{route('history.index')}}">View all Histories</a>
+        </div>
+    </div>
+</li>
 

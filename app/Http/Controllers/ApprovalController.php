@@ -53,7 +53,7 @@ class ApprovalController extends Controller
      * Show the form for creating a new resource.
      *
      * @return \Illuminate\Http\Response
-     */
+     *
     public function create()
     {
         //
@@ -129,6 +129,11 @@ class ApprovalController extends Controller
     public function destroy(Approval $approval)
     {
         $approval->delete();
+        return back();
+    }
+
+    public function deleteAll(){
+        Approval::where('status','=','approved')->delete();
         return back();
     }
 }

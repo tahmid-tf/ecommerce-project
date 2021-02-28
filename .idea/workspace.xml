@@ -7,6 +7,10 @@
     <list default="true" id="e114a0b3-61ef-4a2b-ad45-0363377b464b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ApprovalController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ApprovalController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HistoryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HistoryController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/components/admin-sidebar-components.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/components/admin-sidebar-components.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pages/approval/approval-index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/approval/approval-index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -178,7 +182,7 @@
       <workItem from="1614405538222" duration="122000" />
       <workItem from="1614416057845" duration="4178000" />
       <workItem from="1614445174971" duration="8898000" />
-      <workItem from="1614495772022" duration="21208000" />
+      <workItem from="1614495772022" duration="24443000" />
     </task>
     <servers />
   </component>
@@ -186,10 +190,10 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="728" y="322" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1614171996984">
+    <state x="728" y="322" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1614529858666">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="728" y="322" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040/1920.319.1366.728@0.0.1920.1040" timestamp="1614171996984" />
+    <state x="728" y="322" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040/1920.319.1366.728@0.0.1920.1040" timestamp="1614529858666" />
     <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1614182545815">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -198,9 +202,9 @@
       <screen x="1920" y="319" width="1366" height="728" />
     </state>
     <state x="2383" y="438" key="FileChooserDialogImpl/0.0.1920.1040/1920.319.1366.728@1920.319.1366.728" timestamp="1614168039896" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1614528662145">
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1614531682000">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/1920.319.1366.728@0.0.1920.1040" timestamp="1614528662145" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/1920.319.1366.728@0.0.1920.1040" timestamp="1614531682000" />
   </component>
 </project>

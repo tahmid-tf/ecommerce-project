@@ -14,7 +14,8 @@ class HistoryController extends Controller
      */
     public function index()
     {
-        //
+        $histories = History::all();
+        return view('pages.history.history-index',compact('histories'));
     }
 
     /**
@@ -80,6 +81,12 @@ class HistoryController extends Controller
      */
     public function destroy(History $history)
     {
-        //
+        $history->delete();
+        return back();
+    }
+
+    public function deleteAll(){
+        History::where('status','=','approved')->delete();
+        return back();
     }
 }
