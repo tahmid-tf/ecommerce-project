@@ -5,6 +5,7 @@ use App\Http\Controllers\ProductController;
 use App\Http\Controllers\MainpageController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\CartController;
+use App\Http\Controllers\ApprovalController;
 
 Auth::routes();
 
@@ -17,6 +18,9 @@ Route::resource('product',ProductController::class);
 
 Route::middleware(['auth','admin'])->group(function (){
     Route::resource('admin',AdminController::class);
+    Route::resource('approval',ApprovalController::class);
+    Route::get('approvals/add',[ApprovalController::class,'add'])->name('approval.add');
+
 });
 
 Route::middleware(['auth'])->group(function (){

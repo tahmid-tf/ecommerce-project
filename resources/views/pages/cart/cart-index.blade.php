@@ -121,7 +121,8 @@
 
 <div class="cart-div">
     <h4>Total Price : {{$carts_total_price}}</h4>
-    <button class="btn btn-success cart-buttton">Confirm Order</button>
+    <a href="{{route('approval.add')}}"><button class="btn btn-success cart-buttton">Confirm Order</button>
+    </a>
 </div>
 
 
