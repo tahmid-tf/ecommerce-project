@@ -2,6 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Approval;
+use App\Models\Cart;
+use App\Models\Product;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class AdminController extends Controller
@@ -13,7 +17,16 @@ class AdminController extends Controller
      */
     public function index()
     {
-        return view('pages.adminPage.index');
+        $product = Product::count();
+        $admin = User::where('admin','=','admin')->count();
+        $user = User::where('admin','=','subscriber')->count();
+        $order = Approval::count();
+        $approved = Approval::where('status','=','approved')->count();
+        $unapproved = Approval::where('status','=','unapproved')->count();
+        $cart = Cart::count();
+
+
+        return view('pages.adminPage.index',compact('product','admin','user','order','approved','unapproved','cart'));
     }
 
     /**

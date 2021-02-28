@@ -67,7 +67,7 @@
             <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                 <thead>
                 <tr>
-{{--                    <th>id</th>--}}
+                    <th>id</th>
                     <th>Product Name</th>
                     <th>Product Image</th>
                     <th>Product Price</th>
@@ -78,7 +78,7 @@
                 </thead>
                 <tfoot>
                 <tr>
-{{--                    <th>id</th>--}}
+                    <th>id</th>
                     <th>Product Name</th>
                     <th>Product Image</th>
                     <th>Product Price</th>
@@ -88,9 +88,10 @@
                 </tr>
                 </tfoot>
                 <tbody>
+                <?php $id = 0 ?>
                 @foreach($carts as $cart)
                     <tr>
-{{--                        <td>{{$product->id}}</td>--}}
+                        <td>{{$id+=1}}</td>
                         <td>{{$cart->product_name}}</td>
                         <td><img src="{{asset('storage/'.$cart->product_image)}}" alt="" style="width: 80px; display: block; margin: auto"></td>
                         <td>{{$cart->product_price}}</td>

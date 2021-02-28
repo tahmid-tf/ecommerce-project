@@ -29,9 +29,10 @@
                 </tr>
                 </tfoot>
                 <tbody>
+                <?php $id = 0 ?>
                 @foreach($products as $product)
                     <tr>
-                        <td>{{$product->id}}</td>
+                        <td>{{$id += 1}}</td>
                         <td>{{$product->product_name}}</td>
                         <td>{{$product->product_price}}</td>
                         <td><img src="{{asset('storage/'.$product->product_image)}}" alt="" style="width: 150px"></td>

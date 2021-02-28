@@ -110,6 +110,7 @@ class ApprovalController extends Controller
      */
     public function destroy(Approval $approval)
     {
-        //
+        $approval->delete();
+        return back();
     }
 }
