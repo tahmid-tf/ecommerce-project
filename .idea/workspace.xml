@@ -6,10 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="e114a0b3-61ef-4a2b-ad45-0363377b464b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ApprovalController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ApprovalController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HistoryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HistoryController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/components/admin-sidebar-components.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/components/admin-sidebar-components.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pages/approval/approval-index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/approval/approval-index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -148,6 +144,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/public" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -182,7 +179,8 @@
       <workItem from="1614405538222" duration="122000" />
       <workItem from="1614416057845" duration="4178000" />
       <workItem from="1614445174971" duration="8898000" />
-      <workItem from="1614495772022" duration="24443000" />
+      <workItem from="1614495772022" duration="25804000" />
+      <workItem from="1614580008527" duration="5780000" />
     </task>
     <servers />
   </component>
@@ -202,9 +200,14 @@
       <screen x="1920" y="319" width="1366" height="728" />
     </state>
     <state x="2383" y="438" key="FileChooserDialogImpl/0.0.1920.1040/1920.319.1366.728@1920.319.1366.728" timestamp="1614168039896" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1614531682000">
+    <state x="883" y="243" key="SettingsEditor" timestamp="1614580298039">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/1920.319.1366.728@0.0.1920.1040" timestamp="1614531682000" />
+    <state x="883" y="243" key="SettingsEditor/0.0.1920.1040/1920.319.1366.728@0.0.1920.1040" timestamp="1614580298039" />
+    <state x="2363" y="477" width="672" height="475" key="search.everywhere.popup" timestamp="1614593261246">
+      <screen x="1920" y="319" width="1366" height="728" />
+    </state>
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/1920.319.1366.728@0.0.1920.1040" timestamp="1614592077387" />
+    <state x="2363" y="477" width="672" height="475" key="search.everywhere.popup/0.0.1920.1040/1920.319.1366.728@1920.319.1366.728" timestamp="1614593261246" />
   </component>
 </project>

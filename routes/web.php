@@ -21,7 +21,6 @@ Route::middleware(['auth','admin'])->group(function (){
     Route::resource('admin',AdminController::class);
 
     Route::resource('approval',ApprovalController::class);
-    Route::get('approvals/add',[ApprovalController::class,'add'])->name('approval.add');
     Route::get('approvals/delete',[ApprovalController::class,'deleteAll'])->name('approval.delete');
 
     Route::resource('history',HistoryController::class);
@@ -33,6 +32,9 @@ Route::middleware(['auth','admin'])->group(function (){
 Route::middleware(['auth'])->group(function (){
     Route::resource('cart',CartController::class);
     Route::get('add/{id}',[CartController::class,'add'])->name('cart.add');
+
+    Route::get('approvals/add',[ApprovalController::class,'add'])->name('approval.add');
+
 });
 
 
