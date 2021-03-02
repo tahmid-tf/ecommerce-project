@@ -22,7 +22,7 @@
 <!-- Divider -->
 <hr class="sidebar-divider">
 
-<!-- Nav Item - Pages Collapse Menu -->
+<!-- Nav Item - Pages Collapse Menu (Approvals)-->
 <li class="nav-item">
     <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
         <i class="fas fa-fw fa-cog"></i>
@@ -40,6 +40,7 @@
 <hr class="sidebar-divider">
 
 
+
 <!-- Nav Item - Pages Collapse Menu (Products) -->
 <li class="nav-item">
     <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
@@ -53,4 +54,25 @@
         </div>
     </div>
 </li>
+
+<hr class="sidebar-divider">
+
+
+<!-- Nav Item - Pages Collapse Menu (Slider Image)-->
+<li class="nav-item">
+    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseFive" aria-expanded="true" aria-controls="collapseFive">
+        <i class="fas fa-fw fa-cog"></i>
+        <span>Slider</span>
+    </a>
+    <div id="collapseFive" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+        <div class="bg-white py-2 collapse-inner rounded">
+            <h6 class="collapse-header">Slider Components:</h6>
+            <a class="collapse-item" href="{{route('slider.index')}}">Slider Index</a>
+            <a class="collapse-item" href="{{route('slider.create')}}">Add Slider Image</a>
+        </div>
+    </div>
+</li>
+
+<!-- Divider -->
+
 

@@ -7,6 +7,7 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\ApprovalController;
 use App\Http\Controllers\HistoryController;
+use App\Http\Controllers\SliderController;
 
 Auth::routes();
 
@@ -25,6 +26,8 @@ Route::middleware(['auth','admin'])->group(function (){
 
     Route::resource('history',HistoryController::class);
     Route::get('histories/delete',[HistoryController::class,'deleteAll'])->name("histories.delete");
+
+    Route::resource('/slider',SliderController::class);
 
 
 });
