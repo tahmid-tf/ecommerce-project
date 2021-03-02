@@ -6,7 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="e114a0b3-61ef-4a2b-ad45-0363377b464b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/components/admin-sidebar-components.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/components/admin-sidebar-components.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HistoryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HistoryController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/MainpageController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/MainpageController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_03_02_084252_create_sliders_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_03_02_084252_create_sliders_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pages/sitePage/main-page.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/sitePage/main-page.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -185,7 +188,8 @@
       <workItem from="1614594602018" duration="11000" />
       <workItem from="1614594717295" duration="12000" />
       <workItem from="1614622955786" duration="1042000" />
-      <workItem from="1614674465959" duration="3845000" />
+      <workItem from="1614674465959" duration="7258000" />
+      <workItem from="1614699184856" duration="3291000" />
     </task>
     <servers />
   </component>
@@ -209,10 +213,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="883" y="243" key="SettingsEditor/0.0.1920.1040/1920.319.1366.728@0.0.1920.1040" timestamp="1614580298039" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1614684828064">
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1614703536590">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/1920.319.1366.728@0.0.1920.1040" timestamp="1614684828064" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/1920.319.1366.728@0.0.1920.1040" timestamp="1614703536590" />
     <state x="2363" y="477" width="672" height="475" key="search.everywhere.popup/0.0.1920.1040/1920.319.1366.728@1920.319.1366.728" timestamp="1614593261246" />
   </component>
 </project>

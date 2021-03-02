@@ -70,20 +70,20 @@
     <div class="slider-section">
         <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
             <ol class="carousel-indicators">
-                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                <?php $id = 0 ?>
+                @foreach($sliders as $slider)
+                    <li data-target="#carouselExampleIndicators" data-slide-to="{{$id++}}"></li>
+                @endforeach
             </ol>
             <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img class="d-block w-100" src="https://waltonbd.com/image/catalog/Banner/2020/september/sesion-9.jpg" alt="First slide">
+                @foreach($sliders as $slider)
+                <div class="carousel-item @if($slider->active_status == 'active') active @endif">
+                    <img class="d-block w-100" src="{{asset('storage/'.$slider->slider_image)}}" alt="Second slide">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h6>{{$slider->title}}</h6>
+                    </div>
                 </div>
-                <div class="carousel-item">
-                    <img class="d-block w-100" src="https://waltonbd.com/image/catalog/home-page/slider/21-f-d.jpg" alt="Second slide">
-                </div>
-                <div class="carousel-item">
-                    <img class="d-block w-100" src="https://waltonbd.com/image/catalog/home-page/slider/superbrands-de.jpg" alt="Third slide">
-                </div>
+                @endforeach
             </div>
             <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>

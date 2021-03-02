@@ -42,6 +42,5 @@ Route::middleware(['auth'])->group(function (){
 
 
 //Route::get('test',function (){
-//    $products = \App\Models\Product::all()->sum('product_price');
-//    return $products;
+//
 //});

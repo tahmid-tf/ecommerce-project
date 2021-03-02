@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Cart;
 use App\Models\Product;
+use App\Models\Slider;
 use Illuminate\Http\Request;
 
 class MainpageController extends Controller
@@ -15,13 +16,22 @@ class MainpageController extends Controller
      */
     public function index()
     {
+
+        $sliders = Slider::all();
+
+        if (Slider::all()->first()){
+            $single_slider = Slider::all()->first();
+            $single_slider->active_status = "active";
+            $single_slider->save();
+        }
+
         if (auth()->user()){
             $cart = auth()->user()->cart()->count();
         }else{
             $cart = 0;
         }
         $products = Product::all();
-        return view('pages.sitePage.main-page',compact('products','cart'));
+        return view('pages.sitePage.main-page',compact('products','cart','single_slider','sliders'));
     }
 
     /**

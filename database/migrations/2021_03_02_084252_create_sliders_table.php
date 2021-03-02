@@ -17,6 +17,7 @@ class CreateSlidersTable extends Migration
             $table->id();
             $table->string('title')->nullable();
             $table->string('slider_image');
+            $table->string('active_status')->default('inactive');
             $table->timestamps();
         });
     }

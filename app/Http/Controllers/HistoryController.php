@@ -86,7 +86,11 @@ class HistoryController extends Controller
     }
 
     public function deleteAll(){
-        History::where('status','=','approved')->delete();
+//        History::where('status','=','approved')->delete(); //only approved will delete
+//        $history = History::all();
+//        $history->delete();
+
+        History::truncate();
         return back();
     }
 }
