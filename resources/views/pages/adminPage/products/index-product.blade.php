@@ -14,6 +14,7 @@
                     <th>Update Advertisement</th>
                     <th>Delete Advertisement</th>
                     <th>Add extra images</th>
+                    <th>View related product images</th>
                 </tr>
                 </thead>
                 <tfoot>
@@ -26,6 +27,8 @@
                     <th>Update Advertisement</th>
                     <th>Delete Advertisement</th>
                     <th>Add extra images</th>
+                    <th>View related product images</th>
+
                 </tr>
                 </tfoot>
                 <tbody>
@@ -36,7 +39,7 @@
                         <td>{{$product->product_name}}</td>
                         <td>{{$product->product_price}}</td>
                         <td><img src="{{asset('storage/'.$product->product_image)}}" alt="" style="width: 150px"></td>
-                        <td>{{$product->created_at->diffForHumans()}}</td>
+                        <td>{{$product->created_at}}</td>
                         <td style="text-align: center"><a href="{{route('product.edit',$product->id)}}"><button class="btn btn-outline-primary">Update</button></a></td>
                         <td style="text-align: center">
                             <form action="{{route('product.destroy',$product->id)}}" method="post">
@@ -45,7 +48,8 @@
                                 <input type="submit" value="Delete" class="btn btn-outline-danger">
                             </form>
                         </td>
-                        <td style="text-align: center"><a href="#"><button class="btn btn-outline-info">Add</button></a></td>
+                        <td style="text-align: center"><a href="{{route('images.add',$product->id)}}"><button class="btn btn-outline-info">Add</button></a></td>
+                        <td style="text-align: center"><a href="{{route('image.show',$product->id)}}"><button class="btn btn-outline-info">View</button></a></td>
 {{--                        <td>{{$post->created_at}}</td>--}}
 
 {{--                        <td>--}}

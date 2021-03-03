@@ -69,7 +69,8 @@ class MainpageController extends Controller
             $cart = 0;
         }
         $product = Product::find($id);
-        return view('pages.sitePage.show-info',compact('product','cart'));
+        $product_relation = Product::find($id)->image;
+        return view('pages.sitePage.show-info',compact('product','cart','product_relation'));
     }
 
     /**

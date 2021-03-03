@@ -135,44 +135,21 @@
         <h4>More images</h4>
 
         <div class="row sample-img-padding">
+            @foreach($product_relation as $product)
                 <div class="col-md-2 columns">
                     <div class="group-wrap">
                         <a
-                            href="{{asset('storage/'.$product->product_image)}}"
+                            href="{{asset('storage/'.$product->images)}}"
                             class="yBox"
                             data-ybox-group="group-1"
                             style="width: 300px; height: 300px"
                         >
-                            <img class="card-img-top main-img-width" src="{{asset('storage/'.$product->product_image)}}" alt="Card image cap">
+                            <img class="card-img-top main-img-width" src="{{asset('storage/'.$product->images)}}" alt="Card image cap">
 
                         </a>
                     </div>
                 </div>
-                <div class="col-md-2 columns">
-                    <div class="group-wrap">
-                        <a
-                            href="{{asset('storage/'.$product->product_image)}}"
-                            class="yBox"
-                            data-ybox-group="group-1"
-                            style="width: 300px; height: 300px"
-                        >
-                            <img class="card-img-top main-img-width" src="{{asset('storage/'.$product->product_image)}}" alt="Card image cap">
-                        </a>
-                    </div>
-                </div>
-
-                <div class="col-md-2 columns">
-                    <div class="group-wrap">
-                        <a
-                            href="{{asset('storage/'.$product->product_image)}}"
-                            class="yBox"
-                            data-ybox-group="group-1"
-                            style="width: 300px; height: 300px"
-                        >
-                            <img class="card-img-top main-img-width" src="{{asset('storage/'.$product->product_image)}}" alt="Card image cap">
-                        </a>
-                    </div>
-                </div>
+            @endforeach
 
         </div>
     </div>

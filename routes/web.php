@@ -8,6 +8,7 @@ use App\Http\Controllers\CartController;
 use App\Http\Controllers\ApprovalController;
 use App\Http\Controllers\HistoryController;
 use App\Http\Controllers\SliderController;
+use App\Http\Controllers\ImageController;
 
 Auth::routes();
 
@@ -29,6 +30,8 @@ Route::middleware(['auth','admin'])->group(function (){
 
     Route::resource('/slider',SliderController::class);
 
+    Route::resource('/image',ImageController::class);
+    Route::get('/images/{id}',[ImageController::class,'add'])->name('images.add');
 
 });
 

@@ -17,4 +17,8 @@ class Product extends Model
 //        }
 //        return asset('storage/'.$value);
 //    }
+
+public function image(){
+    return $this->hasMany(Image::class);
+}
 }
