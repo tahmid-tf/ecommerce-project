@@ -9,4 +9,5 @@ class Image extends Model
 {
     use HasFactory;
     protected $guarded = [];
+    protected $dates = ['expired_at'];
 }

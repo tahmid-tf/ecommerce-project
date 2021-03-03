@@ -110,12 +110,27 @@ class ProductController extends Controller
      */
     public function destroy(Product $product)
     {
-        $product->delete();
+        if($product->image) {
+            $images = $product->image;
+
+            foreach ($images as $image) {
+
+                if (Storage::disk('public')->exists($image->images)) {
+                    $image = 'storage/' . $image->images;
+                    unlink($image);
+                }
+                $image->whereId($image->id)->delete();
+
+            }
+        }
 
         if (Storage::disk('public')->exists($product->product_image)) {
             $image = 'storage/' . $product->product_image;
             unlink($image);
         }
+
+        $product->delete();
+
         return redirect()->route('product.index');
     }
 
