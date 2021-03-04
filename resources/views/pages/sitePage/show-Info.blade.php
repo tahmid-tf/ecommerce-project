@@ -70,9 +70,11 @@
                         <a class="nav-link">{{auth()->user()->name}}</a>
                     </li>
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{route('admin.index')}}">Admin-Panel</a>
-                    </li>
+                    @if(auth()->user()->admin == "admin")
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{route('admin.index')}}">Admin-Panel</a>
+                        </li>
+                    @endif
 
                     <li class="nav-item">
                         <a class="nav-link" href="{{route('cart.index')}}">Cart {{$cart === 0 ? '' : '('.$cart.')'}}</a>

@@ -45,5 +45,8 @@ Route::middleware(['auth'])->group(function (){
 
 
 //Route::get('test',function (){
-//
+//    $pass = auth()->user()->password;
+//    if (\Illuminate\Support\Facades\Hash::check('12345678',$pass)){
+//        return "Yeah baby its tripple!";
+//    }
 //});
