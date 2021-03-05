@@ -10,6 +10,7 @@ use App\Http\Controllers\HistoryController;
 use App\Http\Controllers\SliderController;
 use App\Http\Controllers\ImageController;
 use App\Http\Controllers\AuthorizationController;
+use App\Http\Controllers\SubscriberController;
 use Illuminate\Support\Facades\Auth;
 
 Auth::routes();
@@ -36,6 +37,7 @@ Route::middleware(['auth','admin'])->group(function (){
     Route::get('/images/{id}',[ImageController::class,'add'])->name('images.add');
 
     Route::resource('authorization', AuthorizationController::class);
+    Route::resource('subscriber', SubscriberController::class);
 
 });
 

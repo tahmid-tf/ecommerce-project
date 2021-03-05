@@ -250,10 +250,15 @@
 {{--                                Activity Log--}}
 {{--                            </a>--}}
                             <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                            {{-- <a class="dropdown-item" href="{{ auth()->logout() }}" data-toggle="modal" data-target="#logoutModal">
                                 <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
                                 Logout
-                            </a>
+                            </a> --}}
+                            <form action="/logout" method="post" class="form-inline my-2 my-lg-0 dropdown-item">
+                                {{csrf_field()}}
+                                <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                                <input type="submit" value="Logout" class="btn" type="button" value="Logout">
+                            </form>
                         </div>
                     </li>
 
