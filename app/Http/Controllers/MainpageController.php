@@ -23,6 +23,12 @@ class MainpageController extends Controller
             $single_slider = Slider::all()->first();
             $single_slider->active_status = "active";
             $single_slider->save();
+        }else{
+            $inputs = [];
+            $inputs['title'] = "Test title";
+            $inputs['slider_image'] = 'https://wallpaperaccess.com/full/2637581.jpg';
+            $inputs['active_status'] = "active";
+            Slider::create($inputs);
         }
 
         if (auth()->user()){
