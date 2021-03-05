@@ -78,33 +78,6 @@
                         </td>
                     </tr>
                 @endforeach
-
-
-
-{{--                @foreach($carts as $cart)--}}
-{{--                    <tr>--}}
-{{--                        --}}{{--                        <td>{{$product->id}}</td>--}}
-{{--                        <td>{{$cart->product_name}}</td>--}}
-{{--                        <td><img src="{{asset('storage/'.$cart->product_image)}}" alt="" style="width: 80px; display: block; margin: auto"></td>--}}
-{{--                        <td>{{$cart->product_price}}</td>--}}
-{{--                        <td>{{$cart->product_count}}  <br><span style="color: slategray">(Max : 10)</span></td>--}}
-{{--                        <td>--}}
-{{--                            <form action="{{route('cart.update',$cart->id)}}" method="post">--}}
-{{--                                @method('put')--}}
-{{--                                {{csrf_field()}}--}}
-{{--                                <input type="number" name="product_quantity">--}}
-{{--                                <input type="submit" value="Update" class="btn btn-outline-danger">--}}
-{{--                            </form>--}}
-{{--                        </td>--}}
-{{--                        <td style="text-align: center">--}}
-{{--                            <form action="{{route('cart.destroy',$cart->id)}}" method="post">--}}
-{{--                                @method('delete')--}}
-{{--                                {{csrf_field()}}--}}
-{{--                                <input type="submit" value="Remove from cart" class="btn btn-outline-danger">--}}
-{{--                            </form>--}}
-{{--                        </td>--}}
-{{--                    </tr>--}}
-{{--                @endforeach--}}
                 </tbody>
             </table>
         </div>
