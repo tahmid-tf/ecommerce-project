@@ -11,6 +11,7 @@ use App\Http\Controllers\SliderController;
 use App\Http\Controllers\ImageController;
 use App\Http\Controllers\AuthorizationController;
 use App\Http\Controllers\SubscriberController;
+use App\Http\Controllers\CategoryController;
 use Illuminate\Support\Facades\Auth;
 
 Auth::routes();
@@ -38,6 +39,7 @@ Route::middleware(['auth','admin'])->group(function (){
 
     Route::resource('authorization', AuthorizationController::class);
     Route::resource('subscriber', SubscriberController::class);
+    Route::resource('category', CategoryController::class);
 
 });
 
