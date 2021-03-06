@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Cart;
+use App\Models\Category;
 use App\Models\Product;
 use App\Models\Slider;
 use Illuminate\Http\Request;
@@ -18,6 +19,7 @@ class MainpageController extends Controller
     {
 
         $sliders = Slider::all();
+        $categories = Category::all();
 
         if (Slider::all()->first()){
             $single_slider = Slider::all()->first();
@@ -37,7 +39,7 @@ class MainpageController extends Controller
             $cart = 0;
         }
         $products = Product::all();
-        return view('pages.sitePage.main-page',compact('products','cart','single_slider','sliders'));
+        return view('pages.sitePage.main-page',compact('products','cart','single_slider','sliders','categories'));
     }
 
     /**
