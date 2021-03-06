@@ -71,7 +71,7 @@ class SubscriberController extends Controller
      */
     public function update(Request $request, $id)
     {
-        User::whereId($id)->update(["admin"=>"subscriber"]);
+        User::whereId($id)->update(["admin"=>"admin"]);
         return back();
     }
 

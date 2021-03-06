@@ -256,8 +256,10 @@
                             </a> --}}
                             <form action="/logout" method="post" class="form-inline my-2 my-lg-0 dropdown-item">
                                 {{csrf_field()}}
-                                <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
-                                <input type="submit" value="Logout" class="btn" type="button" value="Logout">
+                                <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400">
+                                    <input type="submit" value="Logout" class="btn" value="Logout">
+                                </i>
+
                             </form>
                         </div>
                     </li>
