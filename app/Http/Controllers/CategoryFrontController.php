@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Category;
 use App\Models\Product;
 use App\Models\Slider;
+use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 
 class CategoryFrontController extends Controller
@@ -30,7 +31,9 @@ class CategoryFrontController extends Controller
         }else{
             $cart = 0;
         }
-        $products = Product::all()->where('product_name','=',$name);
+
+        $cat_name = Str::lower($name);
+        $products = Product::all()->where('product_category','=',$cat_name);
         return view('pages.sitePage.category-page',compact('products','cart','single_slider','sliders','categories'));
     }
 }

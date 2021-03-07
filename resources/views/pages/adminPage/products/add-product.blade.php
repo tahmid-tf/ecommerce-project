@@ -16,6 +16,10 @@
         <div class="form-group">
             <input type="number" step="0.01" class="form-control" id="" placeholder="Enter product price" name="product_price" required>
         </div>
+
+        <div class="form-group">
+            <input type="text" class="form-control" id="" placeholder="Enter product category" name="product_category" required>
+        </div>
         <button type="submit" class="btn btn-primary">Submit</button>
     </form>
 @endsection

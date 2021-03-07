@@ -10,6 +10,7 @@
                     <th>Product Name</th>
                     <th>Product Price</th>
                     <th>Product Image</th>
+                    <th>Product Category</th>
                     <th>Advertisement Date</th>
                     <th>Update Advertisement</th>
                     <th>Delete Advertisement</th>
@@ -23,6 +24,7 @@
                     <th>Product Name</th>
                     <th>Product Price</th>
                     <th>Product Image</th>
+                    <th>Product Category</th>
                     <th>Advertisement Date</th>
                     <th>Update Advertisement</th>
                     <th>Delete Advertisement</th>
@@ -39,6 +41,7 @@
                         <td>{{$product->product_name}}</td>
                         <td>{{$product->product_price}}</td>
                         <td><img src="{{asset('storage/'.$product->product_image)}}" alt="" style="width: 150px"></td>
+                        <td>{{$product->product_category}}</td>
                         <td>{{$product->created_at}}</td>
                         <td style="text-align: center"><a href="{{route('product.edit',$product->id)}}"><button class="btn btn-outline-primary">Update</button></a></td>
                         <td style="text-align: center">

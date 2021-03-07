@@ -42,7 +42,8 @@ class ProductController extends Controller
         $inputs = \request()->validate([
             'product_name' => 'required',
             'product_image' => 'file',
-            'product_price' => 'required'
+            'product_price' => 'required',
+            'product_category' => 'required'
         ]);
 
         if(request('product_image')){
@@ -89,7 +90,8 @@ class ProductController extends Controller
         $inputs = \request()->validate([
             'product_name' => 'required',
             'product_image' => 'file',
-            'product_price' => 'required'
+            'product_price' => 'required',
+            'product_category' => 'required'
         ]);
 
         if(request('product_image')){
