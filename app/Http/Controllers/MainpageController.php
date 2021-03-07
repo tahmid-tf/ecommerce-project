@@ -38,7 +38,7 @@ class MainpageController extends Controller
         }else{
             $cart = 0;
         }
-        $products = Product::all();
+        $products = Product::paginate(20);
         return view('pages.sitePage.main-page',compact('products','cart','single_slider','sliders','categories'));
     }
 
@@ -71,6 +71,8 @@ class MainpageController extends Controller
      */
     public function show($id)
     {
+        $categories = Category::all();
+
         if (auth()->user()){
             $cart = auth()->user()->cart()->count();
         }else{
@@ -78,7 +80,7 @@ class MainpageController extends Controller
         }
         $product = Product::find($id);
         $product_relation = Product::find($id)->image;
-        return view('pages.sitePage.show-info',compact('product','cart','product_relation'));
+        return view('pages.sitePage.show-info',compact('product','cart','product_relation','categories'));
     }
 
     /**

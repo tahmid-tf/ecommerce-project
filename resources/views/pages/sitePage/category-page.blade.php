@@ -66,7 +66,7 @@
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                             @foreach ($categories as $category)
-                                 <a class="dropdown-item" href="{{ route('categories.index', $category->name) }}">{{ $category->name }}</a>
+                            <a class="dropdown-item" href="{{ route('categories.index', $category->name) }}">{{ $category->name }}</a>
                                 <div class="dropdown-divider"></div>
                             @endforeach
                         </div>
@@ -182,9 +182,6 @@
         </div>
     </div>
 
-    <div class="pp" style="display: flex; justify-content: center">
-        {{ $products->links() }}
-    </div>
 
 
 
