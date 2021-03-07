@@ -13,6 +13,7 @@ use App\Http\Controllers\AuthorizationController;
 use App\Http\Controllers\SubscriberController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\CategoryFrontController;
+use App\Http\Controllers\SearchController;
 use Illuminate\Support\Facades\Auth;
 
 Auth::routes();
@@ -51,6 +52,8 @@ Route::middleware(['auth'])->group(function (){
     Route::get('approvals/add',[ApprovalController::class,'add'])->name('approval.add');
 
     Route::get('categories/{name}', [CategoryFrontController::class,'index'])->name('categories.index');
+
+    Route::resource('search', SearchController::class);
 
 });
 
