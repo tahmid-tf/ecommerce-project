@@ -19,6 +19,10 @@
         <div class="form-group">
             <input type="number" step="0.01" class="form-control" id="" placeholder="Enter product price" name="product_price" required value="{{$product->product_price}}">
         </div>
+
+        <div class="form-group">
+            <input type="text" class="form-control" id="" placeholder="Update product category" name="product_category" required value="{{$product->product_category}}">
+        </div>
         <button type="submit" class="btn btn-primary">Submit</button>
     </form>
 @endsection

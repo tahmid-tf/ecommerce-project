@@ -58,6 +58,17 @@
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ml-auto nav-item-margin">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Categories
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        @foreach ($categories as $category)
+                        <a class="dropdown-item" href="{{ route('categories.index', $category->name) }}">{{ $category->name }}</a>
+                            <div class="dropdown-divider"></div>
+                        @endforeach
+                    </div>
+                  </li>
                 @if(!auth()->user())
                     <li class="nav-item">
                         <a class="nav-link" href="/login">Login</a>

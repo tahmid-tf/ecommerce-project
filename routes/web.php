@@ -12,6 +12,7 @@ use App\Http\Controllers\ImageController;
 use App\Http\Controllers\AuthorizationController;
 use App\Http\Controllers\SubscriberController;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\CategoryFrontController;
 use Illuminate\Support\Facades\Auth;
 
 Auth::routes();
@@ -48,6 +49,8 @@ Route::middleware(['auth'])->group(function (){
     Route::get('add/{id}',[CartController::class,'add'])->name('cart.add');
 
     Route::get('approvals/add',[ApprovalController::class,'add'])->name('approval.add');
+
+    Route::get('categories/{name}', [CategoryFrontController::class,'index'])->name('categories.index');
 
 });
 

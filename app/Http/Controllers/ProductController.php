@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Category;
 use App\Models\Product;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
@@ -41,7 +42,8 @@ class ProductController extends Controller
         $inputs = \request()->validate([
             'product_name' => 'required',
             'product_image' => 'file',
-            'product_price' => 'required'
+            'product_price' => 'required',
+            'product_category' => 'required'
         ]);
 
         if(request('product_image')){
@@ -88,7 +90,8 @@ class ProductController extends Controller
         $inputs = \request()->validate([
             'product_name' => 'required',
             'product_image' => 'file',
-            'product_price' => 'required'
+            'product_price' => 'required',
+            'product_category' => 'required'
         ]);
 
         if(request('product_image')){
