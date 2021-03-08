@@ -25,7 +25,7 @@ class ApprovalController extends Controller
         $inputs = [];
 
         $user = auth()->user();
-        $carts = Cart::where('user_id',$user->id)->get();
+        $carts = Cart::where('user_id','=',$user->id)->get();
 
         $inputs['name'] = auth()->user()->name;
         $inputs['email'] = auth()->user()->email;
