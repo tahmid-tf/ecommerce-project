@@ -14,6 +14,7 @@ use App\Http\Controllers\SubscriberController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\CategoryFrontController;
 use App\Http\Controllers\SearchController;
+use App\Http\Controllers\SecurityController;
 use Illuminate\Support\Facades\Auth;
 
 Auth::routes();
@@ -54,6 +55,7 @@ Route::middleware(['auth'])->group(function (){
     Route::get('categories/{name}', [CategoryFrontController::class,'index'])->name('categories.index');
 
     Route::resource('search', SearchController::class);
+    Route::resource('security', SecurityController::class);
 
 });
 

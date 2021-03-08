@@ -58,23 +58,7 @@
             <span class="navbar-toggler-icon"></span>
         </button>
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ml-auto nav-item-margin">
-
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      Categories
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        @foreach ($categories as $category)
-                        <a class="dropdown-item" href="{{ route('categories.index', $category->name) }}">{{ $category->name }}</a>
-                            <div class="dropdown-divider"></div>
-                        @endforeach
-                    </div>
-                  </li>
-
-
-
                 @if(!auth()->user())
                     <li class="nav-item">
                         <a class="nav-link" href="/login">Login</a>
@@ -96,23 +80,14 @@
                     <li class="nav-item">
                         <a class="nav-link" href="{{route('cart.index')}}">Cart {{$cart === 0 ? '' : '('.$cart.')'}}</a>
                     </li>
-
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                          Settings
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="{{ route('security.index') }}">Change Password</a>
-                                <div class="dropdown-divider"></div>
-                        </div>
-                      </li>
                 @endif
             </ul>
 
 
 
-            <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <form class="form-inline my-2 my-lg-0" action="{{ route('search.store') }}" method="post">
+                {{ csrf_field() }}
+                <input class="form-control mr-sm-2" type="search" name="search" placeholder="Search" aria-label="Search">
                 <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
             </form>
 
@@ -129,78 +104,42 @@
     </nav>
 </div>
 
-{{--slider section--}}
 
-    <div class="slider-section">
-        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-            <ol class="carousel-indicators">
-                <?php $id = 0 ?>
-                @foreach($sliders as $slider)
-                    <li data-target="#carouselExampleIndicators" data-slide-to="{{$id++}}"></li>
-                @endforeach
-            </ol>
-            <div class="carousel-inner">
-                @foreach($sliders as $slider)
-                <div class="carousel-item @if($slider->active_status == 'active') active @endif">
-                    <img class="d-block w-100" src="{{asset('storage/'.$slider->slider_image)}}" alt="Second slide">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h6>{{$slider->title}}</h6>
-                    </div>
-                </div>
-                @endforeach
+{{-- Password section --}}
+<section>
+    <div>
+        @if (session('password_success'))
+            <p style="background-color : #90EE90; padding: 10px">{{ session('password_success') }} </p>
+        @elseif(session('password_faild'))
+        <p style="background-color : #FF5733; padding: 10px">{{ session('password_faild') }}</p>
+        @endif
+    </div>
+    <div>
+       <h3>Change Password</h3>
+        <hr>
+        <form action="{{ route ('security.store') }}" method="post">
+            {{ csrf_field() }}
+            <div class="form-group">
+                <label for="">Enter current password :</label>
+                <input type="text" class="form-control" placeholder="" name="current_password" required>
             </div>
-            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-            </a>
-        </div>
-    </div>
 
-{{--available product section--}}
-
-    <div class="main-content-section">
-        <h5 class="available-products">Available Products</h5>
-        <div class="main-content">
-            <div class="row">
-
-                @foreach($products as $product)
-
-                <div class="col-md-3 col-sm-12 columns">
-                    <div class="card cards-padding">
-                        <div class="group-wrap">
-                            <a
-                                href="{{asset('storage/'.$product->product_image)}}"
-                                class="yBox img-fluid"
-                                data-ybox-group=""
-                                {{-- style="width: 300px; height: 300px" --}}
-                            >
-                                <img class="card-img-top main-img-width" src="{{asset('storage/'.$product->product_image)}}" alt="Card image cap">
-
-                            </a>
-                        </div>
-
-                        <div class="card-body">
-                            <h5 class="card-title">{{$product->product_name}}</h5>
-                            <p class="card-text">{{$product->product_price}}/-</p>
-                            <a href="{{route('products.show',$product->id)}}" class="btn btn-info btn-width-cap show-info-button">Show Info</a>
-                            <a href="{{route('cart.add',$product->id)}}" class="btn btn-primary btn-width-cap">Add to cart</a>
-                        </div>
-                    </div>
-                </div>
-                @endforeach
-
+            <div class="form-group">
+                <label for="">Enter new password :</label>
+                <input type="text" class="form-control" placeholder="" name="new_password" required>
             </div>
-        </div>
-    </div>
 
-    <div class="pp" style="display: flex; justify-content: center">
-        {{ $products->links() }}
-    </div>
+            <div class="form-group">
+                <label for="">Type again new password :</label>
+                <input type="text" class="form-control" placeholder="" name="verify_password" required>
+            </div>
 
+            <div class="form-group">
+                <input type="submit" value="Confirm" class="btn btn-info">
+            </div>
+        </form>
+    </div>
+</section>
 
 
 <div>

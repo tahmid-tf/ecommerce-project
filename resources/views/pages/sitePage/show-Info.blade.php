@@ -58,6 +58,7 @@
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ml-auto nav-item-margin">
+
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                       Categories
@@ -69,6 +70,9 @@
                         @endforeach
                     </div>
                   </li>
+
+
+
                 @if(!auth()->user())
                     <li class="nav-item">
                         <a class="nav-link" href="/login">Login</a>
@@ -90,6 +94,16 @@
                     <li class="nav-item">
                         <a class="nav-link" href="{{route('cart.index')}}">Cart {{$cart === 0 ? '' : '('.$cart.')'}}</a>
                     </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          Settings
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="{{ route('security.index') }}">Change Password</a>
+                                <div class="dropdown-divider"></div>
+                        </div>
+                      </li>
                 @endif
             </ul>
 
@@ -113,6 +127,7 @@
     </nav>
 </div>
 
+
 {{--single product section--}}
 
 <section>
@@ -123,11 +138,11 @@
                     <div class="group-wrap">
                         <a
                             href="{{asset('storage/'.$product->product_image)}}"
-                            class="yBox"
+                            class="yBox img-fluid"
                             data-ybox-group=""
-                            style="width: 300px; height: 300px"
+                            {{-- style="width: 300px; height: 300px" --}}
                         >
-                            <img class="card-img-top main-img-width" src="{{asset('storage/'.$product->product_image)}}" alt="Card image cap">
+                            <img class="img-fluid" src="{{asset('storage/'.$product->product_image)}}" alt="Card image cap">
 
                         </a>
                     </div>
