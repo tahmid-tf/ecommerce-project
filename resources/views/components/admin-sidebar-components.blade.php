@@ -111,4 +111,21 @@
 </li>
 <!-- Divider -->
 
+<hr class="sidebar-divider">
+
+<!-- Nav Item - Pages Collapse Menu (Category)-->
+<li class="nav-item">
+    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseSettings" aria-expanded="true" aria-controls="collapseSettings">
+        <i class="fas fa-fw fa-cog"></i>
+        <span>Settings</span>
+    </a>
+    <div id="collapseSettings" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+        <div class="bg-white py-2 collapse-inner rounded">
+            <h6 class="collapse-header">Category</h6>
+            <a class="collapse-item" href="{{ route('security.index') }}">Update Password</a>
+        </div>
+    </div>
+</li>
+<!-- Divider -->
+
 
